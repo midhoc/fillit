@@ -6,7 +6,7 @@
 /*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 12:07:26 by midounhocin       #+#    #+#             */
-/*   Updated: 2019/05/09 14:17:05 by midounhocin      ###   ########.fr       */
+/*   Updated: 2019/05/10 13:20:46 by midounhocin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int     ttrs_5(char str[4][4], int str_y, int str_x)
     ttrs_x[2] = 2;
     ttrs_y[0] = 0;
     ttrs_y[1] = 1;
-    ttrs_y[2] = 2;
+    ttrs_y[2] = 1;
     i = 0;
     while (i < 3)
     {

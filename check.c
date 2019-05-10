@@ -6,7 +6,7 @@
 /*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 20:38:47 by midounhocin       #+#    #+#             */
-/*   Updated: 2019/05/10 12:21:59 by midounhocin      ###   ########.fr       */
+/*   Updated: 2019/05/10 13:24:20 by midounhocin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,6 @@ int check(int fd)
         i++;
         next = 1;
     }
+    printf("fail ttrs : %d",i);
     return (0);
 }

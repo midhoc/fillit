@@ -6,11 +6,11 @@
 /*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 12:07:26 by midounhocin       #+#    #+#             */
-/*   Updated: 2019/05/09 14:17:05 by midounhocin      ###   ########.fr       */
+/*   Updated: 2019/05/10 13:13:55 by midounhocin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ttrs_15(char str[4][4], int str_y, int str_x)
+int     ttrs_15(char str[4][4], int str_x, int str_y)
 {
     int i;
     int ttrs_x[3];
@@ -33,7 +33,7 @@ int     ttrs_15(char str[4][4], int str_y, int str_x)
 }
 //{0,1,11,12},
  
-int     ttrs_16(char str[4][4], int str_y, int str_x)
+int     ttrs_16(char str[4][4], int str_x, int str_y)
 {
     int i;
     int ttrs_x[3];
@@ -41,10 +41,10 @@ int     ttrs_16(char str[4][4], int str_y, int str_x)
 
     ttrs_x[0] = 1;
     ttrs_x[1] = 1;
-    ttrs_x[2] = 2;
+    ttrs_x[2] = 1;
     ttrs_y[0] = 0;
     ttrs_y[1] = 1;
-    ttrs_y[2] = 1;
+    ttrs_y[2] = 2;
     i = 0;
     while (i < 3)
     {
@@ -55,7 +55,7 @@ int     ttrs_16(char str[4][4], int str_y, int str_x)
     return (1);
 }
 //   {0,10,-11,-12},
-int     ttrs_17(char str[4][4], int str_y, int str_x)
+int     ttrs_17(char str[4][4], int str_x, int str_y)
 {
     int i;
     int ttrs_x[3];
@@ -77,7 +77,7 @@ int     ttrs_17(char str[4][4], int str_y, int str_x)
     return (1);
 }
 //{0,10,20,21}};
-int     ttrs_18(char str[4][4], int str_y, int str_x)
+int     ttrs_18(char str[4][4], int str_x, int str_y)
 {
     int i;
     int ttrs_x[3];
