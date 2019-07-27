@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 13:26:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/30 20:03:33 by midounhocin      ###   ########.fr       */
+/*   Updated: 2019/07/27 01:37:00 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		search_end(char *str)
+int		search_end(char *str)
 {
 	int i;
 
@@ -26,7 +26,7 @@ static	int		search_end(char *str)
 	return (-1);
 }
 
-static	char	*read_file(char *str, int fd)
+char	*read_file(char *str, int fd)
 {
 	int		ret;
 	char	buffer[BUFF_SIZE + 1];
@@ -57,7 +57,10 @@ int		get_next_line(int const fd, char **line)
 	{
 		*line = read_file(*line, fd);
 		if (!**line)
+		{
+			free(*line);
 			return (0);
+		}
 		end = search_end(*line);
 	}
 	tmp[fd][0] = '\0';

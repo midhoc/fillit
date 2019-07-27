@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 12:32:34 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/30 19:57:21 by midounhocin      ###   ########.fr       */
+/*   Updated: 2019/07/27 01:50:54 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 4
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
 # include <limits.h>
-# include <fcntl.h>
 # include <sys/types.h>
 # include <sys/uio.h>
-# define BUFF_SIZE 4
+# include <fcntl.h>
 
 typedef struct s_list	t_list;
 struct	s_list

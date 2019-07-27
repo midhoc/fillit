@@ -3,39 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/30 20:18:40 by midounhocin       #+#    #+#             */
-/*   Updated: 2019/05/10 12:59:18 by midounhocin      ###   ########.fr       */
+/*   Created: 2019/07/27 01:53:42 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/07/27 03:26:38 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int     main(int argc, char **argv)
+int	 main(int argc, char **argv)
 {
-    int     fd;
+	int		fd;
+	char	str[26][4][4];
+	int		nbr_ttrs;
 
-    if (argc != 2)
-    {
-        ft_putendl("usage: ./fillit file...");
-        return (0);
-    }
-    if ((fd = open(argv[1],O_RDONLY)) < 0)
-    {
-        ft_putendl("error");
-        return (0);
-    }
-    printf("%d\n",check(fd));
-    //*/
-   /*
-   char *line;
-   fd = open("tst",O_RDONLY);
-   for(int i = 0; i < 7;i++)
-   {
-    ft_putnbr(get_next_line(fd,&line));
-    printf("\n%d\n%s\n",i,line);
-   }
-   */
-    return (0);
+	if (argc != 2)
+	{
+		ft_putendl("usage: ./fillit file...");
+		return (0);
+	}
+	if ((fd = open(argv[1],O_RDONLY)) < 0)
+	{
+		ft_putendl("error");
+		return (0);
+	}
+
+
+
+	printf("%d\n%d\n",check(fd, str, &nbr_ttrs),nbr_ttrs);
+	int i = 0;
+	int j,k;
+	while(i<nbr_ttrs)
+	{
+		j = 0;
+
+		while(j < 4)
+		{
+			k=0;
+
+			while(k < 4)
+			{
+				ft_putchar(str[i][j][k]);
+				k++;
+			}
+			ft_putchar('\n');
+			j++;
+		}
+		ft_putchar('\n');
+		i++;
+	}
+	return (0);
 }

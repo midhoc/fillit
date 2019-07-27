@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: midounhocine <midounhocine@student.42.f    +#+  +:+       +#+         #
+#    By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/23 15:42:50 by hmidoun           #+#    #+#              #
-#    Updated: 2019/04/30 20:03:13 by midounhocin      ###   ########.fr        #
+#    Updated: 2019/07/27 01:36:25 by hmidoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,16 +75,19 @@ SRC = ./ft_atoi.c \
 	./ft_tolower.c \
 	./ft_toupper.c \
 	./get_next_line.c
-HEADER = ./
-OBJ = $(SRC:%.c=%.o)
+HEADER = ./libft.h
+INCLUDE_PATH = ./
+OBJ = $(SRC:.c=.o)
 CC = gcc
 FLAG = -Wall -Werror -Wextra
 all : $(NAME)
 
-$(NAME) :
-	$(CC) $(FLAG) -c $(SRC) -I $(HEADER)
+$(NAME) : $(OBJ) $(HEADER)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+$(OBJ) : %.o: %.c
+	$(CC) $(FLAG) -c $(SRC) -I $(INCLUDE_PATH)
 
 clean :
 	rm -f $(OBJ)
