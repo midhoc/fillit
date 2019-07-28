@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:53:42 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/28 15:07:45 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/28 17:41:39 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 int	 main(int argc, char **argv)
 {
 	int			fd;
-	ttrs_list		*head;
+	ttrs_list	*head;
 	int			nbr_ttrs;
+	char		**board;
 
 	if (argc != 2)
 	{
 		ft_putendl("usage: ./fillit file...");
-		return (0);
+		//return (0);
 	}
-	if ((fd = open(argv[1],O_RDONLY)) < 0)
+	if ((fd = open("tst",O_RDONLY)) < 0)
 	{
 		ft_putendl("error");
 		return (0);
@@ -43,28 +44,9 @@ int	 main(int argc, char **argv)
 		head = head->next;
 
 	}
+	board = init_board(board_size(nbr_ttrs));
 
 
-	/*int i = 0;
-	int j,k;
-	while(i<nbr_ttrs)
-	{
-		j = 0;
-
-		while(j < 4)
-		{
-			k=0;
-
-			while(k < 4)
-			{
-				ft_putchar(str[i][j][k]);
-				k++;
-			}
-			ft_putchar('\n');
-			j++;
-		}
-		ft_putchar('\n');
-		i++;
-	}*/
+ft_put_words_tables(board);
 	return (0);
 }
