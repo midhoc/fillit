@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 12:32:34 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/07/27 01:50:54 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/28 17:00:57 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ int		ft_ls_size(t_list *head);
 void	ft_put_words_tables(char **tab);
 char	**ft_split(char *str, char *charset);
 int		get_next_line(int const fd, char **line);
+int		ft_sqrt_max(int nb);
 
 #endif

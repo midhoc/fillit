@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:26:55 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/27 22:08:41 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/28 15:05:56 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	 get_ttrs(int fd, ttrs_list **new, int nbr_ttrs)
 		if(!get_next_line(fd, &line))
 			return (0);
 		if(ft_strlen(line) == 4)
-				ft_strcpy((*new)->ttrs[i],line);
+		{
+			ft_strcpy((*new)->ttrs[i],line);
+			(*new)->ttrs[i][4] = '\0';
+		}
 		else
 			return (0);
 		i++;

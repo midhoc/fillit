@@ -6,13 +6,13 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:53:53 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/27 02:58:04 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/28 15:07:01 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int	 check_ttrs(char str[4][4], int nbr_ttrs)
+int	 check_ttrs(char str[4][5], int nbr_ttrs)
 {
 	int i;
 	int j;
@@ -44,7 +44,7 @@ int	 check_ttrs(char str[4][4], int nbr_ttrs)
 	return(1);
 }
 
-int	 nbr_next_hash(const char str[4][4], int x, int y)
+int	 nbr_next_hash(const char str[4][5], int x, int y)
 {
 	int nbr;
 

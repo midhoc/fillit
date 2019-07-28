@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:53:42 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/27 21:49:08 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/28 15:07:45 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ int	 main(int argc, char **argv)
 
 	while(head)
 	{
-		printf("%s\n",head->ttrs);
+		for(int i = 0; i < 4; i++)
+		{
+			printf("%s\n",head->ttrs[i]);
+		}
+		printf("\n");
 		head = head->next;
 
 	}

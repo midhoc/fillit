@@ -17,14 +17,19 @@
 typedef struct ttrs_list	ttrs_list;
 struct	ttrs_list
 {
-	char		ttrs[4][4];
+	char		ttrs[4][5];
 	int			type;
 	ttrs_list		*next;
 };
 
-int	 check(int fd, ttrs_list **head, int *nbr_ttrs);
-int	 get_ttrs(int fd, ttrs_list **head, int l);
-int	 nbr_next_hash(const char str[4][4], int x, int y);
-int	 check_ttrs(char str[4][4], int nbr_ttrs);
+int	 	check(int fd, ttrs_list **head, int *nbr_ttrs);
+int	 	get_ttrs(int fd, ttrs_list **head, int l);
+int	 	nbr_next_hash(const char str[4][5], int x, int y);
+int	 	check_ttrs(char str[4][5], int nbr_ttrs);
+int		board_size(int nbr_ttrs);
+void	free_board(char ***str);
+char	**creat_board(int size);
+char	**init_board(int size);
+
 
 #endif

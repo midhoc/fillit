@@ -6,7 +6,7 @@
 #    By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/23 15:42:50 by hmidoun           #+#    #+#              #
-#    Updated: 2019/07/27 01:36:25 by hmidoun          ###   ########.fr        #
+#    Updated: 2019/07/28 16:43:37 by hmidoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,8 @@ SRC = ./ft_atoi.c \
 	./ft_strtrim.c \
 	./ft_tolower.c \
 	./ft_toupper.c \
-	./get_next_line.c
+	./get_next_line.c \
+	./ft_sqrt_max.c
 HEADER = ./libft.h
 INCLUDE_PATH = ./
 OBJ = $(SRC:.c=.o)
