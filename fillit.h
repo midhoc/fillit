@@ -14,8 +14,16 @@
 # define FILLIT_H
 # include "./libft/libft.h"
 
-int	 check(int fd, char ttrs[26][4][4], int *nbr_ttrs);
-int	 get_ttrs(int fd, char str[26][4][4], int l);
+typedef struct ttrs_list	ttrs_list;
+struct	ttrs_list
+{
+	char		ttrs[4][4];
+	int			type;
+	ttrs_list		*next;
+};
+
+int	 check(int fd, ttrs_list **head, int *nbr_ttrs);
+int	 get_ttrs(int fd, ttrs_list **head, int l);
 int	 nbr_next_hash(const char str[4][4], int x, int y);
 int	 check_ttrs(char str[4][4], int nbr_ttrs);
 
