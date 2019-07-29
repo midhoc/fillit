@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:53:42 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/28 17:41:39 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/29 20:10:04 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,15 @@ int	 main(int argc, char **argv)
 		head = head->next;
 
 	}
-	board = init_board(board_size(nbr_ttrs));
+	board = init_board(2);
 
 
-ft_put_words_tables(board);
+
+
+ft_put_words_tables(board, 2);
+free_board(board, 2);
+board = init_board(5);
+ft_put_words_tables(board, 5);
+free_board(board, 5);
 	return (0);
 }

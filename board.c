@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 15:41:58 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/28 17:35:37 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/29 20:06:42 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,17 @@ char	**creat_board(int size)
 	return(str);
 }
 
-void	free_board(char ***str)
+void	free_board(char **str, int tab_size)
 {
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while(i < tab_size)
 	{
-		ft_strdel(str[i]);
+		ft_strdel(&str[i]);
 		i++;
 	}
+	free(str);
 }
 
 int		board_size(int nbr_ttrs)
@@ -73,3 +74,25 @@ char	**init_board(int size)
 	}
 	return(board);
 }
+/*
+void	create_board(int size, char **board)
+{
+	int			row;
+	int			col;
+
+	row = -1;
+	col = -1;
+	while (++row < size)
+	{
+		if(!(board[row] = (char*)malloc(sizeof(char) * size)))
+			return(0);
+		col = -1;
+		while (++col < size)
+		{
+			if (argv[row + 1][col] == '.')
+				board[row][col] = 0;
+			else
+				board[row][col] = argv[row + 1][col] - '0';
+		}
+	}
+}*/

@@ -19,6 +19,7 @@ struct	ttrs_list
 {
 	char		ttrs[4][5];
 	int			type;
+	int			on;
 	ttrs_list		*next;
 };
 
@@ -27,9 +28,12 @@ int	 	get_ttrs(int fd, ttrs_list **head, int l);
 int	 	nbr_next_hash(const char str[4][5], int x, int y);
 int	 	check_ttrs(char str[4][5], int nbr_ttrs);
 int		board_size(int nbr_ttrs);
-void	free_board(char ***str);
+void	free_board(char **str, int tab_size);
 char	**creat_board(int size);
 char	**init_board(int size);
+
+
+void	ft_put_words_tables(char **tab, int tab_size);
 
 
 #endif
