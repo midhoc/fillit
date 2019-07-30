@@ -18,12 +18,12 @@ typedef struct ttrs_list	ttrs_list;
 struct	ttrs_list
 {
 	char		ttrs[4][5];
-	int			type;
+//	int			type;
 	int			x_0;
 	int			y_0;
 	int			hight;
 	int			weidth;
-	int			on;
+//	int			on;
 	ttrs_list		*next;
 };
 
@@ -42,6 +42,7 @@ int		check_ttrs_board(char **board,int cord[2],ttrs_list **head,int size);
 void	put_ttrs_board(char **board,int cord[2],ttrs_list **head);
 void	del_ttrs_board(char **board,int cord[2],ttrs_list **head);
 int		back_track(char **board, ttrs_list **head, int size);
+void	ft_ls_push_back_ttrs(ttrs_list **head, ttrs_list *new);
 
 void	ft_put_words_tables(char **tab, int tab_size);
 
