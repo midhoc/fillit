@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:26:55 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/29 23:01:07 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/30 04:08:18 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	 get_ttrs(int fd, ttrs_list **new, int nbr_ttrs)
 		i++;
 		free(line);
 	}
-	if(check_ttrs((*new)->ttrs,nbr_ttrs))
+	if(check_ttrs((*new)->ttrs,nbr_ttrs) && get_origin(new))
 		return (1);
 	return (0);
 }

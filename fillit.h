@@ -35,9 +35,13 @@ int		board_size(int nbr_ttrs);
 void	free_board(char **str, int tab_size);
 char	**creat_board(int size);
 char	**init_board(int size);
-void	get_origin(char	str[4][5], int *x, int *y);
+int		get_origin(ttrs_list **head);
 void	free_list(ttrs_list **head);
-
+void	w_h_O(int i, int j, ttrs_list **head, int flag);
+int		check_ttrs_board(char **board,int cord[2],ttrs_list **head,int size);
+void	put_ttrs_board(char **board,int cord[2],ttrs_list **head);
+void	del_ttrs_board(char **board,int cord[2],ttrs_list **head);
+int		back_track(char **board, ttrs_list **head, int size);
 
 void	ft_put_words_tables(char **tab, int tab_size);
 

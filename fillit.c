@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 01:53:42 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/29 21:54:02 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/30 05:08:15 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	 main(int argc, char **argv)
 	if (argc != 2)
 	{
 		ft_putendl("usage: ./fillit file...");
-		//return (0);
+		return (0);
 	}
-	if ((fd = open("tst1",O_RDONLY)) < 0)
+	if ((fd = open(argv[1],O_RDONLY)) < 0)
 	{
 		ft_putendl("error");
 		return (0);
@@ -45,11 +45,14 @@ check(fd, &head, &nbr_ttrs);
 		head = head->next;
 
 	}
-*/
-	int x,y;
-get_origin(head->ttrs , &head->x_0, &head->y_0);
 
-//printf("%d\t%d\n",head->x_0,head->y_0);
+while(head)
+{
+//get_origin(&head);
+
+printf("%d\t%d\t%d\t%d\n",head->x_0,head->y_0,head->weidth,head->hight);
+head = head->next;
+}*/
 /*
 board = init_board(2);
 ft_put_words_tables(board, 2);
@@ -58,7 +61,21 @@ board = init_board(5);
 ft_put_words_tables(board, 5);
 free_board(board, 5);
 */
-free_list(&head);
+
+int tst = 2;//board_size(nbr_ttrs);
+
+board = init_board(tst);
+
+while(!back_track(board, &head, tst))
+{
+	free_board(board, tst);
+	tst++;
+	board = init_board(tst);
+}
+	ft_put_words_tables(board, tst);
+	free_board(board, tst);
+	free_list(&head);
+	printf("\nnbr_ttrs : %d \t size board : %d\n", nbr_ttrs, tst);
 	return (0);
 }
 

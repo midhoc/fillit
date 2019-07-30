@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 15:41:58 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/29 20:06:42 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/30 01:38:27 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ void	free_board(char **str, int tab_size)
 
 int		board_size(int nbr_ttrs)
 {
-	if(nbr_ttrs <= 4)
-		return(4);
 	return(ft_sqrt_max(nbr_ttrs * 4));
 }
 
