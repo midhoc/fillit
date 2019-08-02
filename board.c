@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 15:41:58 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/07/30 01:38:27 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/31 04:43:45 by sshin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,15 @@ char	**creat_board(int size)
 	i = 0;
 	str = (char **)malloc(sizeof(char *) * size);
 	if (!str)
-		return(NULL);
-	while(i < size)
+		return (NULL);
+	while (i < size)
 	{
 		str[i] = ft_strnew(size);
-		if(!str[i])
-			return(NULL);
+		if (!str[i])
+			return (NULL);
 		i++;
 	}
-
-	return(str);
+	return (str);
 }
 
 void	free_board(char **str, int tab_size)
@@ -37,7 +36,7 @@ void	free_board(char **str, int tab_size)
 	int	i;
 
 	i = 0;
-	while(i < tab_size)
+	while (i < tab_size)
 	{
 		ft_strdel(&str[i]);
 		i++;
@@ -47,7 +46,7 @@ void	free_board(char **str, int tab_size)
 
 int		board_size(int nbr_ttrs)
 {
-	return(ft_sqrt_max(nbr_ttrs * 4));
+	return (ft_sqrt_max(nbr_ttrs * 4));
 }
 
 char	**init_board(int size)
@@ -58,39 +57,17 @@ char	**init_board(int size)
 
 	j = 0;
 	board = creat_board(size);
-	if(!board)
-		return(NULL);
-	while(j < size)
+	if (!board)
+		return (NULL);
+	while (j < size)
 	{
 		i = 0;
-		while(i < size)
+		while (i < size)
 		{
 			board[j][i] = '.';
 			i++;
 		}
 		j++;
 	}
-	return(board);
+	return (board);
 }
-/*
-void	create_board(int size, char **board)
-{
-	int			row;
-	int			col;
-
-	row = -1;
-	col = -1;
-	while (++row < size)
-	{
-		if(!(board[row] = (char*)malloc(sizeof(char) * size)))
-			return(0);
-		col = -1;
-		while (++col < size)
-		{
-			if (argv[row + 1][col] == '.')
-				board[row][col] = 0;
-			else
-				board[row][col] = argv[row + 1][col] - '0';
-		}
-	}
-}*/

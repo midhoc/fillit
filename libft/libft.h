@@ -6,7 +6,7 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 12:32:34 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/07/29 20:05:23 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/07/31 20:36:14 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ t_list	*ft_lstmap(t_list *lst, t_list	*(*f)(t_list *elem));
 char	*ft_rot(char *str, int rot);
 void	ft_ls_push_back(t_list **head, t_list *new);
 int		ft_ls_size(t_list *head);
-//void	ft_put_words_tables(char **tab);
 char	**ft_split(char *str, char *charset);
 int		get_next_line(int const fd, char **line);
 int		ft_sqrt_max(int nb);
